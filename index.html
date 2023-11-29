@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Joyout</title>
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@500&display=swap" rel="stylesheet"> 
+	<style>
+		body
+		{
+			margin: 0px;
+			background-color: #0c0c16;
+		}
+		*
+		{
+			box-sizing: border-box;
+		}
+		html
+		{
+			scroll-behavior: smooth;
+		}
+		.nav
+		{
+			padding: 15px;
+			background-image: linear-gradient(to top, #141426, #0f0f1c);
+			background-repeat: no-repeat;
+		}
+		.not-ul
+		{
+			list-style-type: none;
+			padding: 0px;
+			margin: 0px;
+			color: #f05d5c;
+		}
+		.logo-bar
+		{
+			text-align: center;
+			width: 100%;
+			display: block;
+			padding: 20px;
+		}
+		.logo
+		{
+			vertical-align: middle;
+			width: 200px;
+		}
+		.menu-bar
+		{
+			text-align: left;
+			width: 50%;
+			display: block;
+			padding: 10px;
+			height: 100%;
+			background-color: #090911;
+			position: fixed;
+			box-shadow: 0px 0px 10px;
+			display: none;
+			top: 0;
+			left: 0;
+		}
+		.menu-item
+		{
+			display: inline-block;
+		}
+		.menu-link
+		{
+			display: inline-block;
+			color: #ddd;
+			text-decoration: none;
+			padding: 20px;
+			color: #f05d5c;
+			font-weight: bold;
+		}
+		.welcome
+		{
+			background-image: url(back.png);
+			background-size: contain;
+			background-repeat: no-repeat;
+			height: 300px;
+			text-align: center;
+			margin: 0px;
+		}
+		.main-head
+		{
+			color: #fff;
+			margin: 0px;
+			padding: 20px;
+			text-align: center;
+			font-size: 22px;
+			text-shadow: 0px 0px 3px #000;
+		}
+		.button
+		{
+			margin: 30px auto;
+			width: 200px;
+		}
+		.but-l
+		{
+			color: #fff;
+			text-decoration: none;
+			background-color: #f05d5c;
+			color: #fff;
+			font-weight: bold;
+			text-decoration: none;
+			border-radius: 30px;
+			padding: 10px;
+			font-size: 12px;
+		}
+		.wel-img
+		{
+			background-image: linear-gradient(to top, #0c0c16 5%, #0000);
+			background-repeat: no-repeat;
+			background-size: contain;
+			background-position: bottom;
+			height: 285px;
+			margin: 0px;
+			padding-top: 40px;
+		}
+		.hood
+		{
+			color: grey;
+			text-shadow: 0px 0px 10px #000;
+			font-size: 25px;
+		}
+		.dom
+		{
+			color: #f05d5c;
+			text-shadow: 0px 0px 10px #000;
+			font-size: 35px;
+		}
+		.scr
+		{
+			padding: 50px 0px;
+		}
+		.side1
+		{
+			text-align: center;
+			padding: 20px;
+			display: block;
+			width: 100%;
+		}
+		.side2
+		{
+			text-align: center;
+			padding: 20px;
+			display: block;
+			width: 100%;
+			vertical-align: -2500%;
+		}
+		.services
+		{
+			color: #fff;
+			background-color: #080811;
+		}
+		.serv
+		{
+			display: block;
+			text-align: center;
+			padding: 50px;
+		}
+		.serv-head
+		{
+			font-size: 22px;
+		}
+		.art
+		{
+			font-size: 14px;
+		}
+		.menu-but
+		{
+			text-align: left;
+			display: inline-block;
+			width: 49%;
+			padding-left: 20px;
+		}
+		.menu-log
+		{
+			text-align: right;
+			display: inline-block;
+			width: 49%;
+			padding-right: 20px;
+		}
+		.imago
+		{
+			color: #f05d5c;
+			font-size: 25px;
+			background-color: #090911;
+			border-radius: 30px;
+			width: 50px;
+			height: 50px;
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			box-shadow: 0px 0px 5px;
+			border: solid 1px;
+			cursor: pointer;
+		}
+		.alin
+		{
+			text-align: center;
+			margin: 20px 0px;
+		}
+		.widos
+		{
+			width: 300px;
+		}
+		.icons
+		{
+			width: 50px;
+		}
+		.dis
+		{
+			margin-top: 100px;
+			text-align: center;
+		}
+		.cube
+		{
+			margin: 15px;
+			width: 130px;
+			height: 130px;
+			background-color: #090911;
+			display: inline-flex;
+			align-items: center;
+			border-radius: 20px;
+			color: #c1c0c0;
+			justify-content: center;
+			flex-direction: column;
+		}
+		.sec-sec
+		{
+			font-size: 18px;
+		}
+		.ico
+		{
+			width: 30px;
+		}
+		.port
+		{
+			color: #fff;
+			background-image: linear-gradient(to top, #080811 5%, #0000);
+			padding: 20px;
+			text-align: center;
+		}
+		.as
+		{
+			width: 100%;
+		}
+		hr
+		{
+			border: solid #f05d5c 1px;
+			width: 80px;
+			margin: 40px auto;
+		}
+		.sml
+		{
+			font-size: 15px;
+		}
+		.so
+		{
+			color: grey;
+			letter-spacing: 1px;
+			line-height: 30px;
+			padding: 0px 20px;
+		}
+		footer
+		{
+			padding: 15px;
+			font-weight: bold;
+			text-align: center;
+			color: grey;
+			background-color: #060a11;
+		}
+		.to
+		{
+			margin: 20px 0px;
+			border: unset;
+		}
+		.feld
+		{
+			border-radius: 30px;
+			padding: 10px;
+			border: solid 2px #f05d5c;
+		}
+		.till
+		{
+			text-align: center;
+			color: #fff;
+			margin: 50px 0px;
+		}
+	</style>
+</head>
+<body>
+<div class="nav">
+	<div class="logo-bar">
+		<img src="logo.svg" class="logo">
+	</div>
+	<div class="alin">
+	<div class="menu-but">
+		<span class="fa fa-bars imago"></span>
+	</div><div class="menu-log">
+		<a href="#"><span class="fa fa-sign-in imago"></span></a>
+	</div>
+	<div class="menu-bar">
+		<ul class="not-ul">
+			<li class="menu-item"><a href="#" class="menu-link">عربى</a></li>|
+			<li class="menu-item"><a href="#" class="menu-link">Sign In</a></li>|
+			<li class="menu-item"><a href="#" class="menu-link">Own a Restaurant?</a></li>
+		</ul>
+	</div>
+</div>
+</div>
+<div class="welcome">
+	<div class="wel-img">
+		<h1 class="main-head">Same Restaurants, Different Experience</h1>
+		<div class="button"><a href="#" class="but-l">Discover now</a></div>
+	</div>
+</div>
+<div class="scr">
+	<div class="side1">
+		<h1 class="hood">Not sure where to eat</h1>
+		<h1 class="dom">JoyOut</h1>
+		<h1 class="hood">will help you decide</h1>
+	</div>
+	<div class="side2">
+		<img src="screenshot.png" class="widos">
+	</div>
+</div>
+<div class="services">
+	<div class="serv">
+		<img src="icon1.png" class="icons">
+		<h2 class="serv-head">Discover</h2>
+		<p class="art">Find your next favourite restaurant on the platform for eating out.</p>
+	</div>
+	<div class="serv">
+		<img src="icon2.png" class="icons">
+		<h2 class="serv-head">Reward yourself</h2>
+		<p class="art">Get ready for our exclusive offers and discounts, did we mention that it’s to your favourite places too!</p>
+	</div>
+	<div class="serv">
+		<img src="icon3.png" class="icons">
+		<h2 class="serv-head">Bonus</h2>
+		<p class="art">Reserve, pre-order and make your experience as special as you want it.</p>
+	</div>
+</div>
+<div class="dis">
+	<h1 class="hood">Discover by cuisine</h1>
+	<div class="cube">
+		<img src="icon1.png" class="ico">
+		<br>
+		<h2 class="sec-sec">Grilled</h2>
+	</div>
+	<div class="cube">
+		<img src="icon1.png" class="ico">
+		<br>
+		<h2 class="sec-sec">Sushi</h2>
+	</div>
+	<div class="cube">
+		<img src="icon1.png" class="ico">
+		<br>
+		<h2 class="sec-sec">Indian</h2>
+	</div>
+	<div class="cube">
+		<img src="icon1.png" class="ico">
+		<br>
+		<h2 class="sec-sec">Steak</h2>
+	</div>
+	<div class="cube">
+		<img src="icon1.png" class="ico">
+		<br>
+		<h2 class="sec-sec">Sea Food</h2>
+	</div>
+	<div class="cube">
+		<img src="icon1.png" class="ico">
+		<br>
+		<h2 class="sec-sec">Healthy</h2>
+	</div>
+</div>
+<div class="dis">
+	<h1 class="hood">Discover by mood</h1>
+	<div class="cube">
+		<img src="icon1.png" class="ico">
+		<br>
+		<h2 class="sec-sec">Kids Friendly</h2>
+	</div>
+	<div class="cube">
+		<img src="icon1.png" class="ico">
+		<br>
+		<h2 class="sec-sec">Rooftop</h2>
+	</div>
+	<div class="cube">
+		<img src="icon1.png" class="ico">
+		<br>
+		<h2 class="sec-sec">Outdoor</h2>
+	</div>
+	<div class="cube">
+		<img src="icon1.png" class="ico">
+		<br>
+		<h2 class="sec-sec">Work Or<br> Study</h2>
+	</div>
+	<div class="cube">
+		<img src="icon1.png" class="ico">
+		<br>
+		<h2 class="sec-sec">Kids Friendly</h2>
+	</div>
+	<div class="cube">
+		<img src="icon1.png" class="ico">
+		<br>
+		<h2 class="sec-sec">Rooftop</h2>
+	</div>
+</div>
+<div class="port">
+	<div class="button"><a href="#" class="but-l">Discover now</a></div>
+	<img src="footer.png" class="as">
+	<h1 class="dom">Recent Blogs</h1>
+	<h1 class="hood">Top 6 restaurants in Jeddah to enjoy briskt</h1>
+	<hr>
+	<span class="hood sml">30th April, 2021</span>
+	<br>
+	<p class="art so">Our appreciation for the joy of the lunch in a restaurant to a delicious meal increased after the circumstances that made the dining experience limited to the home and delivery, we missed the journy to find a restaurant every weekend and the dispute over who offers the best steak, the most teastful sushi or the most delicious pasta. It's our pleasure to share with you the top restaurants for various dishes and occasions ...</p>
+</div>
+<div class="till">
+	<h1 class="hood">Own a Restaurant?</h1>
+	<div class="button"><a href="#" class="but-l">Join Us as a partner</a></div>
+	<h1 class="hood">Subscribe to Our Blog</h1>
+	<input type="email" class="feld" placeholder="email"><br>
+	<input type="button" value="Subscribe" class="but-l to">
+</div>
+<footer>All copyrights reserved © 2021</footer>
+</body>
+</html>
